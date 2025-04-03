@@ -1,0 +1,14 @@
+<configuration>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>console.log</file> <!-- Đặt đường dẫn tới tệp log -->
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.example" level="DEBUG" />
+    <root level="INFO">
+        <appender-ref ref="FILE" /> <!-- Sử dụng appender FILE để log ra tệp -->
+    </root>
+</configuration>
